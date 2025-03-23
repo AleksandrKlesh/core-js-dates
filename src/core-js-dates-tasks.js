@@ -35,7 +35,10 @@ function getTime(date) {
   const hours = date.getHours();
   const minutes = date.getMinutes();
   const seconds = date.getSeconds();
-  return `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+  const padding = (value) => {
+    return value < 10 ? `0${value}` : value;
+  };
+  return `${padding(hours)}:${padding(minutes)}:${padding(seconds)}`;
 }
 
 /**
