@@ -77,6 +77,7 @@ function getDayName(date) {
  */
 function getNextFriday(/* date */) {
   throw new Error('Not implemented');
+  // try setDate()
 }
 
 /**
